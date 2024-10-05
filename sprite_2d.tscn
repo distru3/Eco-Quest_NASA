@@ -1,0 +1,206 @@
+[gd_scene load_steps=8 format=3 uid="uid://calh65aun8jsy"]
+
+[ext_resource type="Script" path="res://sprite_2d.gd" id="1_8txnu"]
+[ext_resource type="Texture2D" uid="uid://dfm2ps0s6pwyq" path="res://last_map.png" id="1_15orq"]
+[ext_resource type="PackedScene" uid="uid://dwmj5m4ltot1k" path="res://tree_bundle.tscn" id="1_hvd3x"]
+[ext_resource type="PackedScene" uid="uid://btklv54dl0a8h" path="res://Scene/player.tscn" id="4_dp5o1"]
+[ext_resource type="PackedScene" uid="uid://bg4nltxqedmr7" path="res://cabin.tscn" id="4_j6ume"]
+[ext_resource type="PackedScene" uid="uid://bua26n57ocf3d" path="res://Scene/water.tscn" id="6_mw602"]
+[ext_resource type="Script" path="res://Scene/water.gd" id="7_1ghmn"]
+
+[node name="Sprite2D" type="Sprite2D"]
+script = ExtResource("1_8txnu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_bottom = 20.0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 2443.0
+offset_bottom = 1627.0
+texture = ExtResource("1_15orq")
+
+[node name="player" parent="." instance=ExtResource("4_dp5o1")]
+unique_name_in_owner = true
+position = Vector2(576, 314)
+
+[node name="TreeBundle" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 510)
+
+[node name="TreeBundle2" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(5, 588)
+
+[node name="TreeBundle3" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 647)
+
+[node name="TreeBundle4" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 728)
+
+[node name="TreeBundle5" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 804)
+
+[node name="TreeBundle6" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(7, 883)
+
+[node name="TreeBundle7" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 964)
+
+[node name="TreeBundle8" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 1043)
+
+[node name="TreeBundle9" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 1123)
+
+[node name="TreeBundle10" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(5, 1202)
+
+[node name="TreeBundle11" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(6, 1283)
+
+[node name="TreeBundle12" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(5, 1363)
+
+[node name="TreeBundle13" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(4, 1444)
+
+[node name="TreeBundle38" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(114, 5)
+
+[node name="TreeBundle39" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(220, 5)
+
+[node name="TreeBundle40" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(326, 5)
+
+[node name="TreeBundle41" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(430, 5)
+
+[node name="TreeBundle42" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(535, 5)
+
+[node name="TreeBundle43" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(639, 5)
+
+[node name="TreeBundle44" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(743, 5)
+
+[node name="TreeBundle45" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(847, 5)
+
+[node name="TreeBundle46" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(952, 5)
+
+[node name="TreeBundle47" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1058, 4)
+
+[node name="TreeBundle48" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1163, 4)
+
+[node name="TreeBundle49" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1268, 4)
+
+[node name="TreeBundle50" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1372, 4)
+
+[node name="TreeBundle51" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1476, 5)
+
+[node name="TreeBundle52" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1580, 4)
+
+[node name="TreeBundle53" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1684, 4)
+
+[node name="TreeBundle54" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1788, 4)
+
+[node name="TreeBundle55" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1892, 4)
+
+[node name="TreeBundle56" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(1996, 4)
+
+[node name="TreeBundle57" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2101, 4)
+
+[node name="TreeBundle58" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2206, 4)
+
+[node name="TreeBundle59" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2310, 4)
+
+[node name="TreeBundle60" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2414, 4)
+
+[node name="TreeBundle61" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2454, 5)
+
+[node name="TreeBundle62" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2454, 87)
+
+[node name="TreeBundle63" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2456, 160)
+
+[node name="TreeBundle64" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2456, 241)
+
+[node name="TreeBundle65" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2456, 317)
+
+[node name="TreeBundle66" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2457, 396)
+
+[node name="TreeBundle67" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2456, 477)
+
+[node name="TreeBundle68" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2456, 556)
+
+[node name="TreeBundle69" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2456, 636)
+
+[node name="TreeBundle70" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2455, 715)
+
+[node name="TreeBundle71" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2456, 796)
+
+[node name="TreeBundle72" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2455, 876)
+
+[node name="TreeBundle73" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2454, 957)
+
+[node name="TreeBundle74" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2453, 1036)
+
+[node name="TreeBundle75" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2451, 1118)
+
+[node name="TreeBundle77" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2450, 1201)
+
+[node name="TreeBundle78" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2450, 1284)
+
+[node name="TreeBundle79" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2450, 1363)
+
+[node name="TreeBundle80" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(2449, 1442)
+
+[node name="TreeBundle83" parent="." instance=ExtResource("1_hvd3x")]
+position = Vector2(32, 5)
+
+[node name="Cabin" parent="." instance=ExtResource("4_j6ume")]
+position = Vector2(2213, 326)
+
+[node name="Cabin2" parent="." instance=ExtResource("4_j6ume")]
+position = Vector2(2224, 887)
+
+[node name="water" parent="." instance=ExtResource("6_mw602")]
+unique_name_in_owner = true
+position = Vector2(1304, 1984)
+scale = Vector2(92.75, 30)
+frame_progress = 0.134313
+script = ExtResource("7_1ghmn")

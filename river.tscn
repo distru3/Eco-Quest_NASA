@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpsqfs67i1t5j"]
+
+[ext_resource type="PackedScene" uid="uid://bua26n57ocf3d" path="res://Scene/water.tscn" id="1_rlpex"]
+
+[node name="river" type="CharacterBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-5.82077e-11, 0)
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-1934, -100, -1931, 93, 1936, 100, 1932, -100, 108, -103, 63, 93, -130, 97, -232, -107)
+
+[node name="water" parent="." instance=ExtResource("1_rlpex")]
+position = Vector2(0.000732422, 0)

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf1v4yyxfqv2n"]
+
+[ext_resource type="Texture2D" uid="uid://cbklpg8pm0n7i" path="res://bottle.png" id="1_ds5n4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrdw6"]
+size = Vector2(13, 19.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w15r7"]
+radius = 21.8403
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yrdw6")
+
+[node name="interact_area" type="Area2D" parent="."]
+
+[node name="interact_area_range" type="CollisionShape2D" parent="interact_area"]
+shape = SubResource("CircleShape2D_w15r7")
+disabled = true
+
+[node name="Bottle" type="Sprite2D" parent="."]
+scale = Vector2(0.138393, 0.0908072)
+texture = ExtResource("1_ds5n4")

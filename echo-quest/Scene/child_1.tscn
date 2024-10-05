@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://be0uwdqhjk214"]
+
+[ext_resource type="Texture2D" uid="uid://djl53u66w82fa" path="res://Art/Character/zbrite.png" id="1_668xo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yofr8"]
+atlas = ExtResource("1_668xo")
+region = Rect2(0, 0, 56, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6b3hg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yofr8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjq24"]
+radius = 10.2956
+
+[node name="child 1" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -7)
+scale = Vector2(1.28516, 1.56194)
+sprite_frames = SubResource("SpriteFrames_6b3hg")
+frame_progress = 0.484817
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 24)
+shape = SubResource("CircleShape2D_cjq24")

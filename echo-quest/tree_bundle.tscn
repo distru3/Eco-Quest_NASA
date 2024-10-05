@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwmj5m4ltot1k"]
+
+[ext_resource type="Texture2D" uid="uid://bi5k2slol3wk5" path="res://bundle-trees.png" id="1_6s3kg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0xdu"]
+size = Vector2(102, 97)
+
+[node name="TreeBundle" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 5.5)
+shape = SubResource("RectangleShape2D_t0xdu")
+
+[node name="Bundle-trees" type="Sprite2D" parent="."]
+texture = ExtResource("1_6s3kg")

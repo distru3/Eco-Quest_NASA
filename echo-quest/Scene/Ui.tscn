@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp2615p28tlrn"]
+
+[ext_resource type="Script" path="res://script/menu.gd" id="1_32bf6"]
+[ext_resource type="Texture2D" uid="uid://c6wntnal5xho0" path="res://Scene/Main Menu/Background/9982c61d-4cc9-42ec-a474-06366b2c1c88.png" id="2_8ali1"]
+[ext_resource type="FontFile" uid="uid://c2osjf11pskvd" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="3_keam8"]
+[ext_resource type="Texture2D" uid="uid://8mn8lxlwy0wr" path="res://Scene/Main Menu/exit (1).png" id="4_w81xw"]
+[ext_resource type="Texture2D" uid="uid://dqtxbr70rg6vn" path="res://Scene/Main Menu/yellow-btns-removebg-preview (1).png" id="5_nlfbm"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_32bf6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = -3.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8ali1")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -720.0
+offset_top = 100.0
+offset_right = 777.0
+offset_bottom = 191.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.957817, 0.672055, 3.85046e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("3_keam8")
+theme_override_font_sizes/font_size = 90
+text = "Eco Quest !"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -21.0
+offset_top = -22.0
+offset_right = 244.0
+offset_bottom = 106.0
+rotation = -6.28319
+localize_numeral_system = false
+alignment = 1
+
+[node name="exit_btn" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("4_w81xw")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.536
+anchor_top = 0.651
+anchor_right = 0.536
+anchor_bottom = 0.651
+offset_left = -111.472
+offset_top = -103.848
+offset_right = 107.528
+offset_bottom = 118.152
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_nlfbm")
+
+[connection signal="pressed" from="HBoxContainer/exit_btn" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/exit_btn" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

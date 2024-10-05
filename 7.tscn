@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvlkrjse2nc1e"]
+
+[ext_resource type="Script" path="res://7.gd" id="1_50fey"]
+[ext_resource type="Texture2D" uid="uid://b8htbn0dch35k" path="res://Art/trash/bottle.png" id="2_728ah"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ca3xr"]
+
+[node name="7s" type="StaticBody2D"]
+script = ExtResource("1_50fey")
+
+[node name="Bottle" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(0.4375, 0.264574)
+texture = ExtResource("2_728ah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ca3xr")

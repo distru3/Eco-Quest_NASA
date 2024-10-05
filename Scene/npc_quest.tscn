@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwyloll2in3pg"]
+
+[ext_resource type="Texture2D" uid="uid://dm37dimcb1loy" path="res://Art/pop.png" id="1_deooj"]
+[ext_resource type="Script" path="res://Scene/npc_quest.gd" id="1_o0j74"]
+[ext_resource type="FontFile" uid="uid://c2osjf11pskvd" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="2_mqqkb"]
+[ext_resource type="Script" path="res://Scene/nine_patch_rect.gd" id="3_rghhw"]
+
+[node name="npc_quest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_o0j74")
+
+[node name="task1" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -415.0
+offset_right = -81.0
+offset_bottom = 182.0
+texture = ExtResource("1_deooj")
+script = ExtResource("3_rghhw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="task1"]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 191.0
+offset_bottom = 51.0
+theme_override_colors/default_color = Color(0.945558, 0.693006, 0.0454569, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mqqkb")
+theme_override_font_sizes/normal_font_size = 30
+text = "mum
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="task1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -52.0
+offset_right = 18.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mqqkb")
+theme_override_font_sizes/normal_font_size = 20
+text = "Get near any trash and press f to collect it, then when near a garbage bin and press F to throw the trash in it!"
+
+[node name="ybutton" type="Button" parent="task1"]
+modulate = Color(0.892431, 0.239119, 1.92523e-07, 1)
+layout_mode = 0
+offset_left = 249.0
+offset_top = 109.0
+offset_right = 304.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("2_mqqkb")
+text = "later"
+
+[node name="nbutton" type="Button" parent="task1"]
+modulate = Color(0, 0.807946, 0.593514, 1)
+layout_mode = 0
+offset_left = 191.0
+offset_top = 109.0
+offset_right = 240.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("2_mqqkb")
+text = "okay"
+
+[node name="task2" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_right = 374.0
+offset_bottom = 173.0
+texture = ExtResource("1_deooj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="task2"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 8.0
+offset_right = 118.0
+offset_bottom = 48.0
+theme_override_colors/default_color = Color(0.945098, 0.694118, 0.0470588, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mqqkb")
+theme_override_font_sizes/normal_font_size = 30
+text = "INFO"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="task2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.055
+anchor_top = 0.295
+anchor_right = -0.055
+anchor_bottom = 0.295
+offset_left = 52.81
+offset_top = -12.035
+offset_right = 279.81
+offset_bottom = 80.965
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "“Trash doesn’t have to go to waste! Some items can be recycled and reused, like plastic bottles and paper. Food scraps can be composted to make the soil healthier. Only throw away things that can't be recycled or composted!”
+"
+
+[node name="sbutton" type="Button" parent="task2"]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 97.0
+offset_right = 312.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("2_mqqkb")
+text = "Ok"
+
+[connection signal="pressed" from="task1/ybutton" to="." method="_on_ybutton_pressed"]
+[connection signal="pressed" from="task1/nbutton" to="." method="_on_nbutton_pressed"]
+[connection signal="pressed" from="task2/sbutton" to="." method="_on_sbutton_pressed"]

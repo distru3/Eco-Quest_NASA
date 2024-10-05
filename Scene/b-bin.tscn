@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://nr5b4cbhqqls"]
+
+[ext_resource type="Texture2D" uid="uid://cygkhmpef7xx8" path="res://Blue-Bin.png" id="1_oglsr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njkw2"]
+size = Vector2(38, 45.75)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_njkw2")
+
+[node name="Blue-bin" type="Sprite2D" parent="."]
+position = Vector2(0, -1.52588e-05)
+scale = Vector2(0.219883, 0.204135)
+texture = ExtResource("1_oglsr")

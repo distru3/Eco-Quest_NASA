@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://clcgvgvlp0waj"]
+
+[ext_resource type="Script" path="res://9.gd" id="1_uha6o"]
+[ext_resource type="Texture2D" uid="uid://n1ns1rh2gh6n" path="res://Art/trash/jug.png" id="2_5pktu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ca3xr"]
+
+[node name="9s" type="StaticBody2D"]
+script = ExtResource("1_uha6o")
+
+[node name="Jug" type="Sprite2D" parent="."]
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(0.220486, 0.166466)
+texture = ExtResource("2_5pktu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ca3xr")

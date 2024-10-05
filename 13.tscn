@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpr1xp8njolh3"]
+
+[ext_resource type="Script" path="res://1.gd" id="1_imgpy"]
+[ext_resource type="Texture2D" uid="uid://eq74t5kijcjx" path="res://Art/trash/organic.png" id="2_aftcj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ca3xr"]
+
+[node name="13s" type="StaticBody2D"]
+script = ExtResource("1_imgpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ca3xr")
+
+[node name="Organic" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, -3.8147e-06)
+scale = Vector2(0.188406, 0.200787)
+texture = ExtResource("2_aftcj")

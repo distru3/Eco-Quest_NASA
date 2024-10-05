@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwyloll2in3pg"]
+
+[ext_resource type="Texture2D" uid="uid://dm37dimcb1loy" path="res://Art/pop.png" id="1_deooj"]
+[ext_resource type="FontFile" uid="uid://c2osjf11pskvd" path="res://Fonts/VCR_OSD_MONO_1.001.ttf" id="2_mqqkb"]
+
+[node name="npc_quest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 34.0
+offset_right = 391.0
+offset_bottom = 216.0
+texture = ExtResource("1_deooj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 1
+offset_left = 38.0
+offset_top = 11.0
+offset_right = 203.0
+offset_bottom = 51.0
+theme_override_colors/default_color = Color(0.945558, 0.693006, 0.0454569, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mqqkb")
+theme_override_font_sizes/normal_font_size = 30
+text = "INFO
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -44.0
+offset_right = 77.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mqqkb")
+theme_override_font_sizes/normal_font_size = 20
+text = "could  you go collect this trash from the ground?"
+
+[node name="Button" type="Button" parent="NinePatchRect"]
+modulate = Color(0, 0.807946, 0.593514, 1)
+layout_mode = 0
+offset_left = 144.0
+offset_top = 109.0
+offset_right = 181.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("2_mqqkb")
+text = "Yes"

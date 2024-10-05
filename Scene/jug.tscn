@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://7j8yu3lnat4k"]
+
+[ext_resource type="Texture2D" uid="uid://dejbquebjc13f" path="res://jug.png" id="1_42ieg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llrat"]
+size = Vector2(20.25, 23.25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hidx"]
+radius = 21.8403
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_llrat")
+
+[node name="interact_area" type="Area2D" parent="."]
+
+[node name="interact_area_range" type="CollisionShape2D" parent="interact_area"]
+shape = SubResource("CircleShape2D_5hidx")
+disabled = true
+
+[node name="Jug" type="Sprite2D" parent="."]
+position = Vector2(0, 4.76837e-07)
+scale = Vector2(0.152778, 0.115385)
+texture = ExtResource("1_42ieg")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmy1rd5xnkeke"]
+
+[ext_resource type="Script" path="res://Scene/mother.gd" id="1_vgxdo"]
+[ext_resource type="PackedScene" uid="uid://cwyloll2in3pg" path="res://Scene/npc_quest.tscn" id="2_karhi"]
+[ext_resource type="Texture2D" uid="uid://c3ctd04s7x76j" path="res://Art/Character/SpriteSheet.png" id="2_ml0yq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8be3"]
+atlas = ExtResource("2_ml0yq")
+region = Rect2(0, 0, 23, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_es8ku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8be3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5uqr0"]
+radius = 29.1548
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tgtxj"]
+radius = 96.7988
+
+[node name="mother" type="CharacterBody2D"]
+script = ExtResource("1_vgxdo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6, -8)
+scale = Vector2(3.031, 2.906)
+sprite_frames = SubResource("SpriteFrames_es8ku")
+frame_progress = 0.227888
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 21)
+shape = SubResource("CircleShape2D_5uqr0")
+
+[node name="chat_area" type="Area2D" parent="."]
+position = Vector2(1, 1)
+
+[node name="chat_area_range" type="CollisionShape2D" parent="chat_area"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_tgtxj")
+disabled = true
+
+[node name="npc_quest" parent="." instance=ExtResource("2_karhi")]
+offset_left = -409.0
+offset_top = -254.0
+offset_right = -369.0
+offset_bottom = -214.0
+
+[connection signal="area_entered" from="chat_area" to="." method="_on_chat_area_area_entered"]
